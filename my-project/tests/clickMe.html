@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+
+    <title>Tab Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .button-style {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: none;
+            border: 2px solid #083564;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .counter-style {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+   <button class="button-style" id="clickMeButton" data-action="increment" role="button">Click Me</button> 
+    <div class="counter-style" id="counter" data-counter="number">0</div>
+</body>
+<script>
+    let counter = 0;
+    const button = document.getElementById('clickMeButton');    
+    const counterDisplay = document.getElementById('counter');
+    button.onclick = function() {
+        counter++;
+        counterDisplay.innerText = counter;
+    }
+</script>
+</html>
